@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-bg: #f8fafc;
+  --color-brand-surface: #ffffff;
+  --color-brand-hover: #e2e8f0;
+  --color-brand-border: #0f172a;
+  --color-whatsapp: #25D366;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: #0f172a;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Bento Card Style overriding Glass Panel */
+.glass-panel {
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 0px !important; /* Sharp neo-brutalist bento look */
+  box-shadow: 4px 4px 0px 0px #0f172a;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.glass-panel-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #0f172a;
+}
+
+/* Bento Button Styles */
+.bento-btn-primary {
+  background: #0f172a;
+  color: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 0px !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 4px 4px 0px 0px #8b5cf6; /* Accent color shadow */
+  transition: all 0.2s ease;
+}
+
+.bento-btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #8b5cf6;
+}
+
+.bento-btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #8b5cf6;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-left: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f172a;
+  border: 2px solid #f1f5f9;
+}
+
+/* Fuel Range Custom Styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border: 2px solid #0f172a;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #3b82f6;
+  border: 2px solid #0f172a;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #2563eb;
+}

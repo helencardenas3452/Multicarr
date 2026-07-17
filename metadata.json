@@ -1,0 +1,6 @@
+{
+  "name": "AutoTech AI",
+  "description": "Gestión inteligente para talleres mecánicos con análisis predictivo, historial clínico, inventario y panel operativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
