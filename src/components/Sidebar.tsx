@@ -33,21 +33,17 @@ export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen }: 
         }`}
       >
         {/* Logo Header */}
-        <div className="flex items-center gap-3 mb-12">
-          <div className="w-10 h-10 rounded-none bg-indigo-600 border-2 border-slate-900 flex items-center justify-center text-white shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
-            <Wrench className="w-5 h-5 animate-pulse" />
-          </div>
-          <div>
-            <h1 className="text-xl font-black tracking-tighter text-white flex items-center gap-1">
-              AUTOTECH 
-              <span className="text-[10px] bg-amber-400 text-slate-950 border border-slate-950 font-extrabold px-1.5 py-0.5 rounded-none uppercase tracking-wide">
-                AI
-              </span>
-            </h1>
-            <p className="text-[9px] text-slate-400 font-mono tracking-widest uppercase">WORKSPACE v2.4</p>
+        <div className="flex items-center justify-between mb-12 gap-3">
+          <div className="flex items-center min-w-0">
+            <img 
+              src="https://multicarr.co/images/img_footer.png" 
+              alt="Multicarr Logo" 
+              className="max-h-12 w-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <button 
-            className="md:hidden ml-auto text-slate-400 hover:text-white p-1"
+            className="md:hidden text-slate-400 hover:text-white p-1 shrink-0"
             onClick={() => setIsOpen(false)}
             aria-label="Cerrar menú"
           >
